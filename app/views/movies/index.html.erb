@@ -1,0 +1,32 @@
+
+<h3>INDICE DE PELICULAS</h3>
+
+<h4> 
+    <%= link_to movies_new_path do %>
+        <%= fa_stacked_icon "plus inverse", base: "circle", class: "lg" %>
+        Agregar nueva película
+    <% end %>
+</h4>
+
+<div class="table-wrapper">
+    <table class="alt">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Año</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @movies.each do |movie| %>
+            <tr>
+                <td><%= movie.name %></td>
+                <td><%= movie.year %></td>
+                <td><%= movie.description %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+
+
+</div>

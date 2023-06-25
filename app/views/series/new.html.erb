@@ -1,0 +1,24 @@
+<h2>Nueva serie</h2>
+
+<%= form_for @series, url: '/series/create' do |form| %>
+    <div class="row ">
+        <div class="col-12 ">
+            <%= form.label :Nombre, style: "display: block" %>
+            <%= form.text_field :name %>
+        </div>
+    
+        <div class="col-12 ">
+            <%= form.label :Capitulos, style: "display: block" %>
+            <%= form.text_field :chapters %>
+        </div>
+    
+        <div>
+            <%= form.label :Descripcion, style: "display: block" %>
+            <%= form.text_field :description, placeholder: "Escribe una descripción breve" %>
+        </div>
+    
+        <div class="col-12">
+        <input type="submit" value="Crear Serie" />
+        </div>
+    </div>
+<% end %>

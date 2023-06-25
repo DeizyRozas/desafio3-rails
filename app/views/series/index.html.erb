@@ -1,0 +1,32 @@
+
+<h3>INDICE DE SERIES</h3>
+
+<h4> 
+    <%= link_to series_new_path do %>
+        <%= fa_stacked_icon "plus inverse", base: "circle", class: "lg" %>
+        Agregar nueva serie
+    <% end %>
+</h4>
+
+<div class="table-wrapper">
+    <table class="alt">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Capítulos</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @series.each do |serie| %>
+            <tr>
+                <td><%= serie.name %></td>
+                <td><%= serie.chapters %></td>
+                <td><%= serie.description %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+
+
+</div>

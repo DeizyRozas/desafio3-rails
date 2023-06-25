@@ -1,0 +1,32 @@
+
+<h3>INDICE DE DOCUMENTALES</h3>
+
+<h4> 
+    <%= link_to documentary_film_new_path do %>
+        <%= fa_stacked_icon "plus inverse", base: "circle", class: "lg" %>
+        Agregar nuevo documental
+    <% end %>
+</h4>
+
+<div class="table-wrapper">
+    <table class="alt">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Año</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @documentary_film.each do |documental| %>
+            <tr>
+                <td><%= documental.name %></td>
+                <td><%= documental.year %></td>
+                <td><%= documental.description %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+
+
+</div>

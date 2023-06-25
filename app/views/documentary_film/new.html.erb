@@ -1,0 +1,24 @@
+<h2>Nuevo documental</h2>
+
+<%= form_for @documentary_film, url: '/documentary_film/create' do |form| %>
+    <div class="row ">
+        <div class="col-12 ">
+            <%= form.label :Nombre, style: "display: block" %>
+            <%= form.text_field :name %>
+        </div>
+    
+        <div class="col-12 ">
+            <%= form.label :Año, style: "display: block" %>
+            <%= form.text_field :year %>
+        </div>
+    
+        <div>
+            <%= form.label :Descripcion, style: "display: block" %>
+            <%= form.text_field :description, placeholder: "Escribe una descripción breve" %>
+        </div>
+    
+        <div class="col-12">
+        <input type="submit" value="Crear documental" />
+        </div>
+    </div>
+<% end %>

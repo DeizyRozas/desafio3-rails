@@ -1,0 +1,25 @@
+
+<h2>Nueva película</h2>
+
+<%= form_for @movie, url: '/movies/create' do |form| %>
+    <div class="row ">
+        <div class="col-12 ">
+            <%= form.label :Nombre, style: "display: block" %>
+            <%= form.text_field :name %>
+        </div>
+    
+        <div class="col-12 ">
+            <%= form.label :Año, style: "display: block" %>
+            <%= form.text_field :year %>
+        </div>
+    
+        <div>
+            <%= form.label :Descripcion, style: "display: block" %>
+            <%= form.text_field :description, placeholder: "Escribe una descripción breve" %>
+        </div>
+    
+        <div class="col-12">
+        <input type="submit" value="Crear pelicula" />
+        </div>
+    </div>
+<% end %>
